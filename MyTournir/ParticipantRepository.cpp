@@ -49,14 +49,18 @@ public:
 	}
 
 	void LoadAll(const char* fileName) {
-		char* bufferName;
+		char* bufferName = new char[50];
 		int bufferGender;
 		list.clear();
 		file_reader.open(fileName, ios::in);
 		Participant* p;
 		while (!file_reader.eof()) {
 			p = new Participant;
+			  
 			file_reader >> bufferName;
+			const char* c = bufferName;
+			p->Name.Value = c;
+			//new char[7] {"loaded"};
 				//p->Name.Value;
 			// bufferName; //p -> Name.Value;
 			//p->Name.Value = bufferName;//= //new char[strlen(bufferName)];

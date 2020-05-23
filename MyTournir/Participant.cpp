@@ -5,7 +5,7 @@
 using namespace std;
 struct String
 {
-	char* Value;
+	const char* Value;
 };
 
 class Participant {
